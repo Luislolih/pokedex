@@ -1,0 +1,143 @@
+.mainLanding {
+  position: relative;
+}
+.mainLanding a {
+  text-decoration: none;
+  color: inherit;
+}
+.imgContainer {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+.containerTitle {
+  position: absolute;
+}
+.background {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+.containerButton,
+.buttonGo {
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .mainLanding {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .containerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    color: #fff;
+    top: 10%;
+    left: 5%;
+    font-size: 4vw;
+    width: 45%;
+  }
+  .title {
+    font-size: 6.5vw;
+  }
+  .containerButton {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.3rem 0.5rem;
+    background-color: #fff;
+    border-radius: 0.3rem;
+  }
+  .containerButton:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+  .buttonGo {
+    font-size: 4vw;
+    border: none;
+    background-color: #fff;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .mainLanding {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .containerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    color: #fff;
+    top: 15%;
+    left: 5%;
+    font-size: 4vw;
+    width: 45%;
+  }
+  .title {
+    font-size: 6.5vw;
+  }
+  .containerButton {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.3rem 0.5rem;
+    background-color: #fff;
+    border-radius: 0.3rem;
+  }
+  .containerButton:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+  .buttonGo {
+    font-size: 4vw;
+    border: none;
+    background-color: #fff;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mainLanding {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .containerTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    color: #fff;
+    top: 15%;
+    left: 5%;
+    font-size: 2.2vw;
+    width: 30%;
+  }
+  .title {
+    font-size: 4.5vw;
+  }
+  .containerButton {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.3rem 0.5rem;
+    background-color: #fff;
+    border-radius: 0.3rem;
+  }
+  .containerButton:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+  .buttonGo {
+    font-size: 2.5vw;
+    border: none;
+    background-color: #fff;
+  }
+}

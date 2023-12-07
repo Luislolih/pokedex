@@ -1,0 +1,127 @@
+.mainFooter {
+  background-color: #526d82;
+  color: #fff;
+}
+.socialMediaContainer {
+  cursor: pointer;
+}
+.socialMediaContainer a {
+  text-decoration: none;
+  color: inherit;
+}
+.titleApp {
+  cursor: pointer;
+}
+.leftContainer a {
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (max-width: 767px) {
+  .mainFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 7.5% 0 7.5% 10%;
+    gap: 1rem;
+  }
+  .leftContainer,
+  .rightContainer {
+    width: 50%;
+    font-size: 4vw;
+  }
+  .leftContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .socialMediaContainer {
+    display: flex;
+
+    width: 33%;
+    gap: 0.5rem;
+  }
+  .titleApp {
+    font-size: 7vw;
+  }
+
+  .iconsSocialMedia {
+    font-size: 6vw;
+  }
+  .iconsSocialMedia:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .mainFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 5% 0 5% 10%;
+    gap: 1.5rem;
+  }
+  .leftContainer,
+  .rightContainer {
+    width: 50%;
+    font-size: 3vw;
+  }
+  .leftContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .socialMediaContainer {
+    display: flex;
+
+    width: 33%;
+    gap: 0.5rem;
+  }
+  .titleApp {
+    font-size: 5vw;
+  }
+
+  .iconsSocialMedia {
+    font-size: 4.5vw;
+  }
+  .iconsSocialMedia:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mainFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 10%;
+    align-items: start;
+  }
+  .leftContainer,
+  .rightContainer {
+    width: 33%;
+    font-size: 1.5vw;
+  }
+  .leftContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .socialMediaContainer {
+    width: 33%;
+    gap: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  .titleApp {
+    font-size: 3vw;
+  }
+
+  .iconsSocialMedia {
+    font-size: 2.5vw;
+  }
+  .iconsSocialMedia:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+}

@@ -1,0 +1,68 @@
+.mainPaginate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5% 10%;
+}
+.prevButton {
+  display: none;
+}
+.navigatePaginate {
+  background-color: #526d82;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.navigatePaginate:hover {
+  background-color: #62829b;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+.containerButtons {
+  cursor: pointer;
+  text-align: center;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.currentPage {
+  color: #fff;
+  background-color: #526d82;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .mainPaginate {
+    font-size: 1rem;
+  }
+  .currentPage {
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .mainPaginate {
+    font-size: 1.5rem;
+  }
+  .currentPage {
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mainPaginate {
+    font-size: 1.2rem;
+  }
+  .currentPage {
+    padding: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

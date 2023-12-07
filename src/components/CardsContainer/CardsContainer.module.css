@@ -1,0 +1,200 @@
+@media screen and (max-width: 767px) {
+  .mainCardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #9db2bf;
+    padding: 0 0 7.5% 0;
+  }
+  .cardsContainer {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .mainCardsContainer a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .detailPokemon {
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    width: 100%;
+  }
+  .imageContainer {
+    width: 100%;
+    background-color: #fff;
+  }
+  .pokemonImage {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .nameContainer {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .pokemonName {
+    color: #526d82;
+    background-color: #fff;
+    font-size: 7.5vw;
+  }
+  .typesContainer {
+    background-color: #fff;
+    display: flex;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+  .pokemonTypes {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    list-style-type: none;
+    padding: 0.2rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 3.5vw;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .mainCardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #9db2bf;
+    padding: 0 0 7.5% 0;
+  }
+  .cardsContainer {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  .mainCardsContainer a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .detailPokemon {
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    width: 45%;
+  }
+  .imageContainer {
+    width: 100%;
+    background-color: #fff;
+  }
+  .pokemonImage {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .nameContainer {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .pokemonName {
+    color: #526d82;
+    background-color: #fff;
+    font-size: 4vw;
+  }
+  .typesContainer {
+    background-color: #fff;
+    display: flex;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+  .pokemonTypes {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    list-style-type: none;
+    padding: 0.2rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .mainCardsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #9db2bf;
+    padding: 0 0 5% 0;
+  }
+  .cardsContainer {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    z-index: 0;
+  }
+  .mainCardsContainer a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .detailPokemon {
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    width: 22%;
+  }
+  .detailPokemon:hover {
+    animation: subirYBajar 0.15s alternate;
+    transition: 0.2s;
+  }
+  @keyframes subirYBajar {
+    to {
+      transform: translateY(-5px);
+    }
+  }
+  .imageContainer {
+    width: 100%;
+    background-color: #fff;
+  }
+  .pokemonImage {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .nameContainer {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pokemonName {
+    color: #526d82;
+    background-color: #fff;
+    font-size: 2.5vw;
+  }
+  .typesContainer {
+    background-color: #fff;
+    display: flex;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+  .pokemonTypes {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    list-style-type: none;
+    padding: 0.2rem 1rem;
+    border-radius: 0.4rem;
+    font-size: 1.2vw;
+  }
+}

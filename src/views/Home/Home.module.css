@@ -1,0 +1,26 @@
+.containerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  background-color: #9db2bf;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .containerTitle {
+    padding: 7.5% 10% 0 10%;
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .containerTitle {
+    padding: 7.5% 10% 0 10%;
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .containerTitle {
+    padding: 5% 10% 0 10%;
+    font-size: 2vw;
+  }
+}
