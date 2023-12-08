@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
-import { FaSquareInstagram } from "react-icons/fa6";
+import { BiLogoGmail } from "react-icons/bi";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -19,12 +19,11 @@ const Footer = () => {
           {" "}
           <FaLinkedin className={styles.iconsSocialMedia} />
         </a>
-
+        <a href="mailto:luislolihuamanchumo@gmail.com" target="_blank">
+          <BiLogoGmail className={styles.iconsSocialMedia} />
+        </a>
         <a href="https://github.com/Luislolih" target="_blank">
           <FaSquareGithub className={styles.iconsSocialMedia} />
-        </a>
-        <a href="https://www.instagram.com/luisloli_/" target="_blank">
-          <FaSquareInstagram className={styles.iconsSocialMedia} />
         </a>
       </div>
       <div className={styles.rightContainer}>
