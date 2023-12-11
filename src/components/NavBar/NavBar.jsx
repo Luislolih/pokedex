@@ -4,11 +4,15 @@ import { usePokemonContext } from "../../context/PokemonContext";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const handleClick = () => {
+    handleSearchTerm("");
+    handleTypeSelected("");
+  };
   const { handleSearchTerm } = usePokemonContext();
   return (
     <main className={styles.mainNavBar}>
       <div className={styles.imgContainer}>
-        <Link to="/home">
+        <Link to="/home" onClick={handleClick}>
           <img src={logo} className={styles.imgLogo}></img>
         </Link>
       </div>

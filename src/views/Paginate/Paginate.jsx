@@ -2,8 +2,9 @@ import styles from "./Paginate.module.css";
 import { usePokemonContext } from "../../context/PokemonContext";
 
 const Paginate = () => {
-  const { currentPage, handleNextPage, handlePreviousPage } =
+  const { currentPage, handleNextPage, handlePreviousPage, filterPokemons } =
     usePokemonContext();
+
   return (
     <main className={styles.mainPaginate}>
       <div className={styles.containerButtons}>
@@ -21,7 +22,9 @@ const Paginate = () => {
         <p
           onClick={() => handleNextPage()}
           className={
-            currentPage != 65 ? styles.navigatePaginate : styles.nextButton
+            currentPage != 65 && filterPokemons.length == 20
+              ? styles.navigatePaginate
+              : styles.nextButton
           }
         >
           NEXT

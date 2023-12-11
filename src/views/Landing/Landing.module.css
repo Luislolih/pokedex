@@ -48,7 +48,7 @@
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0.3rem 0.5rem;
     background-color: #fff;
     border-radius: 0.3rem;
@@ -87,7 +87,7 @@
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0.3rem 0.5rem;
     background-color: #fff;
     border-radius: 0.3rem;
@@ -126,7 +126,7 @@
     width: 50%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0.3rem 0.5rem;
     background-color: #fff;
     border-radius: 0.3rem;

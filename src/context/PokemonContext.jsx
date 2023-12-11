@@ -9,6 +9,7 @@ import React, {
 const PokemonContext = createContext();
 
 export const PokemonProvider = ({ children }) => {
+  const [loading, setLoading] = useState(true);
   const [pokemonData, setPokemonData] = useState([]);
   const [pokemonTypes, setPokemonTypes] = useState([]);
   const [selectedType, setSelectedType] = useState("");
@@ -33,12 +34,11 @@ export const PokemonProvider = ({ children }) => {
     const fetchPokemonData = async () => {
       try {
         let apiPokemon;
+        const offset = (currentPage - 1) * itemsPerPage;
 
-        if (searchTerm) {
-          console.log("Buscando:", searchTerm);
-
+        setLoading(true);
+        if (searchTerm || selectedType) {
           apiPokemon = `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=9999`;
-
           const response = await fetch(apiPokemon);
 
           if (!response.ok) {
@@ -46,7 +46,6 @@ export const PokemonProvider = ({ children }) => {
           }
 
           const data = await response.json();
-
           const filteredPokemon = data.results.filter((pokemon) =>
             pokemon.name.includes(searchTerm.toLowerCase())
           );
@@ -58,9 +57,7 @@ export const PokemonProvider = ({ children }) => {
           const detailedPokemon = await Promise.all(pokemonPromise);
           setPokemonData(detailedPokemon);
         } else {
-          const offset = (currentPage - 1) * itemsPerPage;
           apiPokemon = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${itemsPerPage}`;
-
           const response = await fetch(apiPokemon);
 
           if (!response.ok) {
@@ -77,10 +74,13 @@ export const PokemonProvider = ({ children }) => {
         }
       } catch (error) {
         console.error("Error en la solicitud fetch:", error);
+      } finally {
+        setLoading(false);
       }
     };
     const fetchPokemonTypes = async () => {
       try {
+        setLoading(true);
         const apiPokemonTypes = "https://pokeapi.co/api/v2/type/";
         const response = await fetch(apiPokemonTypes);
 
@@ -92,20 +92,25 @@ export const PokemonProvider = ({ children }) => {
         setPokemonTypes(data.results);
       } catch (error) {
         console.error("Error en la solicitud fetch para tipos:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchPokemonData();
     fetchPokemonTypes();
-  }, [currentPage, itemsPerPage, searchTerm]);
+  }, [currentPage, itemsPerPage, searchTerm, selectedType]);
 
   // FUNCTION SELECTED TYPE:
   const handleTypeSelected = (newType) => {
     if (newType !== selectedType) {
       setSelectedType(newType);
+      setCurrentPage(1);
     }
   };
-
+  // PAGINATED:
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
   // FILTER POKEMONS BY TYPE:
   const filterPokemons = useMemo(() => {
     return selectedType
@@ -113,7 +118,13 @@ export const PokemonProvider = ({ children }) => {
           pokemon.types.some((type) => type.type.name === selectedType)
         )
       : pokemonData;
-  }, [selectedType, pokemonData]);
+  }, [selectedType, pokemonData, startIndex, endIndex]);
+  useEffect(() => {
+    console.log("currentPage:", currentPage);
+    console.log("filterPokemons:", filterPokemons);
+
+    // Resto del código...
+  }, [currentPage, filterPokemons]);
 
   // SORT POKEMONS ALPHABETIC:
   const [sortAlphabetic, setSortAlphabetic] = useState(filterPokemons);
@@ -140,7 +151,7 @@ export const PokemonProvider = ({ children }) => {
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);
   };
-  // FUNCTION NEXT PAGE:
+  // FUNCTION PREVIOUS PAGE:
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
   };
@@ -161,6 +172,7 @@ export const PokemonProvider = ({ children }) => {
         currentPage,
         handleNextPage,
         handlePreviousPage,
+        loading,
       }}
     >
       {children}

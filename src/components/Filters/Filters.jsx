@@ -2,8 +2,7 @@ import styles from "./Filters.module.css";
 import { useState } from "react";
 import { usePokemonContext } from "../../context/PokemonContext";
 import { colorTextType, backgroundColorType } from "../../variables";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
+import { IoIosArrowDown, IoIosArrowUp, IoMdClose } from "react-icons/io";
 const Filters = () => {
   const {
     pokemonTypes,
@@ -32,42 +31,49 @@ const Filters = () => {
         <label className={styles.typesTitle} onClick={handleTypesVisible}>
           Select Type
         </label>
-        <ul
-          className={
-            isTypesVisible
-              ? styles.typesOptionsContainer
-              : styles.typesOptionsContainerNone
-          }
-        >
-          <li
-            className={styles.types}
-            style={{
-              backgroundColor: "#fff",
-            }}
-            onClick={() => {
-              handleTypeSelected("");
-              handleTypesVisible();
-            }}
+
+        <div>
+          <ul
+            className={
+              isTypesVisible
+                ? styles.typesOptionsContainer
+                : styles.typesOptionsContainerNone
+            }
           >
-            all
-          </li>
-          {pokemonTypes.map((type, index) => (
+            <IoMdClose
+              className={styles.closeIcon}
+              onClick={() => setIsTypesVisible(false)}
+            />
             <li
-              onClick={() => {
-                handleTypeSelected(type.name);
-                handleTypesVisible();
-              }}
-              key={index}
               className={styles.types}
               style={{
-                backgroundColor: backgroundColorType(type.name),
-                color: colorTextType(type.name),
+                backgroundColor: "#fff",
+              }}
+              onClick={() => {
+                handleTypeSelected("");
+                handleTypesVisible();
               }}
             >
-              {type.name}
+              all
             </li>
-          ))}
-        </ul>
+            {pokemonTypes.map((type, index) => (
+              <li
+                onClick={() => {
+                  handleTypeSelected(type.name);
+                  handleTypesVisible();
+                }}
+                key={index}
+                className={styles.types}
+                style={{
+                  backgroundColor: backgroundColorType(type.name),
+                  color: colorTextType(type.name),
+                }}
+              >
+                {type.name}
+              </li>
+            ))}
+          </ul>
+        </div>
         <p
           className={styles.showSelectedType}
           style={{

@@ -13,7 +13,7 @@ const Landing = () => {
           Look for your favorite pokemon and learn more about it!
         </p>
         <Link to="/home" className={styles.containerButton}>
-          <button className={styles.buttonGo}>Go!</button>
+          <button className={styles.buttonGo}>GO!</button>
         </Link>
       </div>
     </main>

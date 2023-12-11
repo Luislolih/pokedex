@@ -1,6 +1,7 @@
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 import Filters from "../../components/Filters/Filters";
 import Footer from "../../components/Footer/Footer";
+import Loader from "../../components/Loader/Loader";
 import NavBar from "../../components/NavBar/NavBar";
 import Paginate from "../Paginate/Paginate";
 import styles from "./Home.module.css";
