@@ -4,9 +4,7 @@
     justify-content: center;
     color: #526d82;
 }
-.colorNegative {
-    color: rgb(65, 65, 65);
-}
+
 @keyframes girar {
     0% {
         transform: rotate(0deg);
