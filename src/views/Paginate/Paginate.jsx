@@ -2,36 +2,37 @@ import styles from "./Paginate.module.css";
 import { usePokemonContext } from "../../context/PokemonContext";
 
 const Paginate = () => {
-  const { currentPage, handleNextPage, handlePreviousPage, filterPokemons } =
-    usePokemonContext();
+    const { currentPage, handlePage, pokemonData } = usePokemonContext();
 
-  return (
-    <main className={styles.mainPaginate}>
-      <div className={styles.containerButtons}>
-        <p
-          onClick={() => handlePreviousPage()}
-          className={
-            currentPage > 1 ? styles.navigatePaginate : styles.prevButton
-          }
-        >
-          PREV
-        </p>
-      </div>
-      <p className={styles.currentPage}>{currentPage}</p>
-      <div className={styles.containerButtons}>
-        <p
-          onClick={() => handleNextPage()}
-          className={
-            currentPage != 65 && filterPokemons.length == 20
-              ? styles.navigatePaginate
-              : styles.nextButton
-          }
-        >
-          NEXT
-        </p>
-      </div>
-    </main>
-  );
+    return (
+        <main className={styles.mainPaginate}>
+            <div className={styles.containerButtons}>
+                <p
+                    onClick={() => handlePage(currentPage - 1)}
+                    className={
+                        currentPage > 1
+                            ? styles.navigatePaginate
+                            : styles.prevButton
+                    }
+                >
+                    PREV
+                </p>
+            </div>
+            <p className={styles.currentPage}>{currentPage}</p>
+            <div className={styles.containerButtons}>
+                <p
+                    onClick={() => handlePage(currentPage + 1)}
+                    className={
+                        pokemonData.length === 20
+                            ? styles.navigatePaginate
+                            : styles.nextButton
+                    }
+                >
+                    NEXT
+                </p>
+            </div>
+        </main>
+    );
 };
 
 export default Paginate;

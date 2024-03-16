@@ -7,18 +7,18 @@ import Paginate from "../Paginate/Paginate";
 import styles from "./Home.module.css";
 
 const Home = () => {
-  return (
-    <main>
-      <NavBar />
-      <div className={styles.containerTitle}>
-        <h1 className={styles.title}>Select your Pokémon!</h1>
-      </div>
-      <Filters />
-      <CardsContainer />
-      <Paginate />
-      <Footer />
-    </main>
-  );
+    return (
+        <main>
+            <NavBar showSearchBar={true} />
+            <div className={styles.containerTitle}>
+                <h1 className={styles.title}>Select your Pokémon!</h1>
+            </div>
+            <Filters />
+            <CardsContainer />
+            <Paginate />
+            <Footer />
+        </main>
+    );
 };
 
 export default Home;

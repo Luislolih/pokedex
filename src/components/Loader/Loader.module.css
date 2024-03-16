@@ -1,19 +1,21 @@
 .mainLoader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #9db2bf;
-  color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #526d82;
+}
+.colorNegative {
+    color: rgb(65, 65, 65);
 }
 @keyframes girar {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .pokeball {
-  font-size: 7vw;
-  animation: girar 2s linear infinite;
+    font-size: 7vw;
+    animation: girar 2s linear infinite;
 }

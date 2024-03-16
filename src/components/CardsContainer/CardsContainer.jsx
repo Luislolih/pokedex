@@ -3,57 +3,65 @@ import { usePokemonContext } from "../../context/PokemonContext";
 import { backgroundColorType, colorTextType } from "../../variables";
 import { Link } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import { useEffect } from "react";
 const CardsContainer = () => {
-  const { sortAlphabetic, loading, visiblePokemons } = usePokemonContext();
+    const { pokemonData, loading } = usePokemonContext();
 
-  // console.log("sortAlphabetic:", sortAlphabetic);
-  // console.log("loading:", loading);
+    return (
+        <main className={styles.mainCardsContainer}>
+            {loading ? (
+                <Loader />
+            ) : (
+                <div className={styles.cardsContainer}>
+                    {pokemonData.map((pokemon, index) => (
+                        <Link
+                            to={`/pokemon/${pokemon.name}`}
+                            className={styles.detailPokemon}
+                            key={index}
+                        >
+                            <div className={styles.imageContainer}>
+                                <img
+                                    className={styles.pokemonImage}
+                                    src={
+                                        pokemon.sprites.other[
+                                            "official-artwork"
+                                        ].front_default
+                                    }
+                                ></img>
+                                <div className={styles.nameContainer}>
+                                    <h2
+                                        key={pokemon.name}
+                                        className={styles.pokemonName}
+                                    >
+                                        {pokemon.name}
+                                    </h2>
 
-  return (
-    <main className={styles.mainCardsContainer}>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className={styles.cardsContainer}>
-          {sortAlphabetic.map((pokemon, index) => (
-            <Link
-              to={`/pokemon/${pokemon.name}`}
-              className={styles.detailPokemon}
-              key={index}
-            >
-              <div className={styles.imageContainer}>
-                <img
-                  className={styles.pokemonImage}
-                  src={pokemon.sprites.other["official-artwork"].front_default}
-                ></img>
-                <div className={styles.nameContainer}>
-                  <h2 key={pokemon.name} className={styles.pokemonName}>
-                    {pokemon.name}
-                  </h2>
-
-                  <ul className={styles.typesContainer}>
-                    {" "}
-                    {pokemon.types.map((type, index) => (
-                      <li
-                        key={index}
-                        className={styles.pokemonTypes}
-                        style={{
-                          backgroundColor: backgroundColorType(type.type.name),
-                          color: colorTextType(type.type.name),
-                        }}
-                      >
-                        {type.type.name}
-                      </li>
+                                    <ul className={styles.typesContainer}>
+                                        {" "}
+                                        {pokemon.types.map((type, index) => (
+                                            <li
+                                                key={index}
+                                                className={styles.pokemonTypes}
+                                                style={{
+                                                    backgroundColor:
+                                                        backgroundColorType(
+                                                            type.type.name
+                                                        ),
+                                                    color: colorTextType(
+                                                        type.type.name
+                                                    ),
+                                                }}
+                                            >
+                                                {type.type.name}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </Link>
                     ))}
-                  </ul>
                 </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
-    </main>
-  );
+            )}
+        </main>
+    );
 };
 export default CardsContainer;

@@ -1,251 +1,271 @@
 @media screen and (max-width: 767px) {
-  .subContainerCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0 5% 0;
-    gap: 1rem;
-  }
-  .pokemonName {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    color: #526d82;
-    font-size: 9vw;
-    padding: 1rem 0 0 0;
-  }
-
-  .containerImgPokemon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    border-radius: 50%;
-    position: relative;
-  }
-  .imgPokemon {
-    width: 100%;
-  }
-  .backgroundImg {
-    position: absolute;
-    padding: 40%;
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.6;
-  }
-  .containerCharacteristicsAndTypes {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .characteristicsList {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    background-color: #526d82;
-    color: #fff;
-  }
-  .characteristics {
-    flex-basis: calc(50% - 1rem);
-    font-size: 3.5vw;
-    text-align: left;
-  }
-  .characteristicsTitle {
-    font-weight: bold;
-  }
-  .typesContainer {
-    display: flex;
-    width: 100%;
-    display: flex;
-    list-style: none;
-    border-radius: 5rem;
-    gap: 0.5rem;
-  }
-  .typesTitle {
-    font-size: 3.5vw;
-  }
-  .types {
-    width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    text-transform: capitalize;
-    font-size: 3.5vw;
-    border-radius: 0.5rem;
-  }
+    .subContainerCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5rem 10% 3.5rem 10%;
+        gap: 1rem;
+    }
+    .pokemonName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        color: #526d82;
+        font-size: 9vw;
+        padding: 0;
+        margin: 0;
+    }
+    .containerCrt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .containerImgPokemon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        border-radius: 50%;
+        position: relative;
+    }
+    .imgPokemon {
+        width: 100%;
+    }
+    .backgroundImg {
+        position: absolute;
+        padding: 40%;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.6;
+    }
+    .containerCharacteristicsAndTypes {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .characteristicsList {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        background-color: #526d82;
+        color: #fff;
+    }
+    .characteristics {
+        flex-basis: calc(50% - 1rem);
+        font-size: 3.5vw;
+        text-align: left;
+    }
+    .characteristicsTitle {
+        font-weight: bold;
+    }
+    .typesContainer {
+        display: flex;
+        width: 100%;
+        display: flex;
+        list-style: none;
+        border-radius: 5rem;
+        gap: 0.5rem;
+    }
+    .typesTitle {
+        font-size: 3.5vw;
+    }
+    .types {
+        width: 100%;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+        font-size: 3.5vw;
+        border-radius: 0.5rem;
+    }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .subContainerCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0 5% 0;
-    gap: 2rem;
-  }
-  .pokemonName {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    color: #526d82;
-    font-size: 8.5vw;
-    padding: 1rem 0 0 0;
-  }
-
-  .containerImgPokemon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    border-radius: 50%;
-    position: relative;
-  }
-  .imgPokemon {
-    width: 100%;
-  }
-  .backgroundImg {
-    position: absolute;
-    padding: 40%;
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.6;
-  }
-  .containerCharacteristicsAndTypes {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .characteristicsList {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    background-color: #526d82;
-    color: #fff;
-  }
-  .characteristics {
-    flex-basis: calc(50% - 1rem);
-    font-size: 3.5vw;
-    text-align: left;
-  }
-  .characteristicsTitle {
-    font-weight: bold;
-  }
-  .typesContainer {
-    display: flex;
-    width: 100%;
-    display: flex;
-    list-style: none;
-    border-radius: 5rem;
-    gap: 0.5rem;
-  }
-  .typesTitle {
-    font-size: 3.5vw;
-  }
-  .types {
-    width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    text-transform: capitalize;
-    font-size: 3.5vw;
-    border-radius: 0.5rem;
-  }
+    .subContainerCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3.5rem 10% 4.5rem 10%;
+        gap: 2rem;
+    }
+    .pokemonName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        color: #526d82;
+        font-size: 8.5vw;
+        padding: 0;
+        margin: 0;
+    }
+    .containerCrt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .containerImgPokemon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        border-radius: 50%;
+        position: relative;
+    }
+    .imgPokemon {
+        width: 100%;
+    }
+    .backgroundImg {
+        position: absolute;
+        padding: 40%;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.6;
+    }
+    .containerCharacteristicsAndTypes {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .characteristicsList {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        background-color: #526d82;
+        color: #fff;
+    }
+    .characteristics {
+        flex-basis: calc(50% - 1rem);
+        font-size: 3.5vw;
+        text-align: left;
+    }
+    .characteristicsTitle {
+        font-weight: bold;
+    }
+    .typesContainer {
+        display: flex;
+        width: 100%;
+        display: flex;
+        list-style: none;
+        border-radius: 5rem;
+        gap: 0.5rem;
+    }
+    .typesTitle {
+        font-size: 3.5vw;
+    }
+    .types {
+        width: 100%;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+        font-size: 3.5vw;
+        border-radius: 0.5rem;
+    }
 }
 
 @media screen and (min-width: 1023px) {
-  .subContainerCard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 10%;
-    gap: 5rem;
-  }
-  .pokemonName {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
-    color: #526d82;
-    font-size: 5.5vw;
-    padding: 1rem 0;
-  }
-
-  .containerImgPokemon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    border-radius: 50%;
-    position: relative;
-  }
-  .imgPokemon {
-    width: 100%;
-  }
-  .backgroundImg {
-    position: absolute;
-    padding: 40%;
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0.6;
-  }
-  .containerCharacteristicsAndTypes {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .characteristicsList {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    background-color: #526d82;
-    color: #fff;
-  }
-  .characteristics {
-    flex-basis: calc(50% - 1rem);
-    font-size: 2vw;
-    text-align: left;
-  }
-  .characteristicsTitle {
-    font-weight: bold;
-  }
-  .typesContainer {
-    display: flex;
-    width: 100%;
-    display: flex;
-    list-style: none;
-    border-radius: 5rem;
-    gap: 0.5rem;
-  }
-  .typesTitle {
-    font-size: 2vw;
-  }
-  .types {
-    width: 100%;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    text-transform: capitalize;
-    font-size: 2vw;
-    border-radius: 0.5rem;
-  }
+    .subContainerCard {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem 10%;
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+    .pokemonName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        color: #526d82;
+        font-size: 6.5vw;
+        padding: 1rem 0;
+    }
+    .containerCrt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+        margin: 0;
+        padding: 0;
+    }
+    .containerImgPokemon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        border-radius: 50%;
+        position: relative;
+    }
+    .imgPokemon {
+        width: 100%;
+    }
+    .backgroundImg {
+        position: absolute;
+        padding: 40%;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.6;
+    }
+    .containerCharacteristicsAndTypes {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .characteristicsList {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        background-color: #526d82;
+        color: #fff;
+    }
+    .characteristics {
+        flex-basis: calc(50% - 1rem);
+        font-size: 2vw;
+        text-align: left;
+    }
+    .characteristicsTitle {
+        font-weight: bold;
+    }
+    .typesContainer {
+        display: flex;
+        width: 100%;
+        display: flex;
+        list-style: none;
+        border-radius: 5rem;
+        gap: 0.5rem;
+    }
+    .typesTitle {
+        font-size: 2vw;
+    }
+    .types {
+        width: 100%;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+        font-size: 2vw;
+        border-radius: 0.5rem;
+    }
 }
