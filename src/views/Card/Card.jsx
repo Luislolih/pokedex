@@ -6,11 +6,13 @@ import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import Loader from "../../components/Loader/Loader";
 const Card = () => {
-    const { pokemonData } = usePokemonContext();
+    const { pokemonData, loading, setLoading } = usePokemonContext();
     const { name } = useParams();
     const pokemon = pokemonData.find((pokemon) => pokemon.name === name);
 
     if (!pokemon) {
+        setLoading(true);
+        setLoading(false);
         return <Loader />;
     }
 

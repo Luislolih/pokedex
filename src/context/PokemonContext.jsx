@@ -156,6 +156,8 @@ export const PokemonProvider = ({ children }) => {
                 loading,
                 filterActive,
                 handleSortAlp,
+                loading,
+                setLoading,
             }}
         >
             {children}
