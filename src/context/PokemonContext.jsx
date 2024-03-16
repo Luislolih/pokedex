@@ -61,11 +61,12 @@ export const PokemonProvider = ({ children }) => {
                               )
                           )
                         : detailedPokemon;
-                    setLoading(false);
+
                     const currentItems = filteredByType.slice(
                         indexOfFirstItem,
                         indexOfLastItem
                     );
+                    setLoading(false);
                     let sortAlp = currentItems;
                     setLoading(true);
                     if (filterActive === "A-Z") {
