@@ -11,8 +11,6 @@ const Card = () => {
     const pokemon = pokemonData.find((pokemon) => pokemon.name === name);
 
     if (!pokemon) {
-        setLoading(true);
-        setLoading(false);
         return <Loader />;
     }
 
